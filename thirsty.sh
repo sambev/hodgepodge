@@ -29,4 +29,20 @@ echo "CLEANING UP........."
 echo "===================="
 rm master.zip
 
+echo "================================="
+echo "INSTALLING PYTHON DEPENDENCIES..."
+echo "================================="
+cd $1 && pip install -r requirements.txt
+
+
+echo "================================="
+echo "INSTALLING BOWER COMPONENTS......"
+echo "================================="
+bower install
+
+echo "================================="
+echo "INSTALLING NPM COMPONENTS........"
+echo "================================="
+npm install
+
 exit 0
